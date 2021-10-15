@@ -4,6 +4,10 @@
 ```
 npm install
 ```
+### Change axios base url in main.js file
+```
+Chnage  axios.defaults.baseURL = 'http://127.0.0.1:8001' to your own laravel api local or dev url
+```
 
 ### Compiles and hot-reloads for development
 ```
