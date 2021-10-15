@@ -9,10 +9,11 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 
 ## Clone the repository
+```
 git clone https://github.com/amuvavi/BooksApi.git
-
+```
 ## Add .env file withthe following credentials
-# file: .env
+```
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX 
@@ -26,28 +27,33 @@ DYNAMODB_CONNECTION=local
 DYNAMODB_LOCAL_ENDPOINT=your_local_endpoint
 SESSION_DRIVER=array
 
-
+```
 
 ### Run Migrations
+```
 Run -php artisan migrate- for your local DynamoDb databse
-
+```
+```
 php artisan --env dev migrate for your remote database
-
+```
 
 
 
 ## Seed The Databse
-
+```
 php artisan db:seed  # for the local DynamoDB
 php artisan --env dev db:seed  # for DynamoDB in AWS
-
+```
 ## Using Local Dynamo Db
-
+```
 php -S localhost:8001 -t public
-
+```
 ## Preparing to Deploy to Aws Lambda
+```
 composer install --prefer-dist --optimize-autoloader --no-dev
-php artisan config:clear
-serverless deploy
 
+php artisan config:clear
+
+serverless deploy
+```
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
